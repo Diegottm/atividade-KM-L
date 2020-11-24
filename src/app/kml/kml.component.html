@@ -1,0 +1,11 @@
+<div>
+    <br>
+    <input type="text" id="distancia" name="distancia" placeholder="Distância percorrida" [(ngModel)]="distancia"><br><br>
+    <input type="text" id="consumo" name="consumo" placeholder="Litros Gastos" [(ngModel)]="litrosGastos"><br><br>
+    <input type="button" id="calcular" name="calcular" value="Calcular" (click)="calcularKml()">
+
+    <p>{{media}} Km/l</p>
+    <p *ngIf="media > 13">Econômico</p>
+    <p *ngIf="media >= 10 && media < 12.99">Normal</p>
+    <p *ngIf="media < 9.99">Gastador</p>
+</div>
